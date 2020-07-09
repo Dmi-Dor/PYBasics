@@ -1,11 +1,10 @@
-def div(*args):
+def income():
     try:
-        arg1 = int(input("enter dividend: "))
-        arg2 = int(input("enter divider: "))
-        res = arg1 / arg2
+        time = float(input('Выработка в часах: '))
+        salary = int(input('Ставка: '))
+        bonus = int(input('Премия: '))
+        res = time * salary + bonus
+        print(f'заработная плата сотрудника  {res}')
     except ValueError:
-        return 'Value error'
-    except ZeroDivisionError:
-        return "Wrong devider! You can't use zero as a devider"
-    return res
-print(f'result  {div()}')
+        return print('Not a number')
+income()

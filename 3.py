@@ -1,8 +1,1 @@
-def my_func(arg1 , arg2, arg3):
-    if arg1 >= arg3 and arg2 >= arg3:
-        return arg1 + arg2
-    elif arg1 > arg2 and arg1 < arg3:
-        return arg1 + arg3
-    else:
-        return arg2 + arg3
-print(f'Result - {my_func(int(input("enter first argument: ")), int(input("enter second argument: ")), int(input("enter third argument: ")))}')
+print(f'Числа от 20 до 240 кратные 20 или 21 - {[el for el in range(20, 241) if el % 20 == 0 or el % 21 == 0]}')
