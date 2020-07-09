@@ -1,5 +1,10 @@
-def int_func (*args):
-    word = input("enter words: ")
-    print(word.title())
-    return
-int_func()
+from itertools import count
+
+for el in count(int(input('Введите стартовое число: '))):
+    print(el)
+
+from itertools import cycle
+
+my_list = [True, 'ABC', 123, None]
+for el in cycle(my_list):
+    print(el)
