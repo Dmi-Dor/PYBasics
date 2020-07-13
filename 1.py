@@ -1,10 +1,13 @@
-def income():
-    try:
-        time = float(input('Выработка в часах: '))
-        salary = int(input('Ставка: '))
-        bonus = int(input('Премия: '))
-        res = time * salary + bonus
-        print(f'заработная плата сотрудника  {res}')
-    except ValueError:
-        return print('Not a number')
-income()
+my_f = open('test.txt', 'w')
+line = input('Введите текст \n')
+while line:
+    my_f.writelines(line)
+    line = input('Введите текст \n')
+    if not line:
+        break
+
+my_f.close()
+my_f = open('test.txt', 'r')
+content = my_f.readlines()
+print(content)
+my_f.close()

@@ -1,10 +1,6 @@
-from itertools import count
-
-for el in count(int(input('Введите стартовое число: '))):
-    print(el)
-
-from itertools import cycle
-
-my_list = [True, 'ABC', 123, None]
-for el in cycle(my_list):
-    print(el)
+subj = {}
+with open('file_6.txt', 'r') as init_f:
+    for line in init_f:
+        subject, lecture, practice, lab = line.split()
+        subj[subject] = int(lecture) + int(practice) + int(lab)
+    print(f'Общее количество часов по предмету - \n {subj}')

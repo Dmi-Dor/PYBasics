@@ -1,4 +1,15 @@
-my_list = [15, 2, 3, 1, 7, 5, 4, 10]
-my_new_list = [el for num, el in enumerate(my_list) if my_list[num - 1] < my_list[num]]
-print(f'Original list {my_list}')
-print(f'New list {my_new_list}')
+my_file = open('file_2.txt', 'r')
+content = my_file.read()
+print(f'Содержимое файла: \n {content}')
+my_file = open('file_2.txt', 'r')
+content = my_file.readlines()
+print(f'Количество строк в файле - {len(content)}')
+my_file = open('file_2.txt', 'r')
+content = my_file.readlines()
+for i in range(len(content)):
+    print(f'Окличество символов {i + 1} - ой строки {len(content[i])}')
+my_file = open('file_2.txt', 'r')
+content = my_file.read()
+content = content.split()
+print(f'Общее количество слов - {len(content)}')
+my_file.close()
