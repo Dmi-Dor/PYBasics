@@ -1,13 +1,20 @@
-my_f = open('test.txt', 'w')
-line = input('Введите текст \n')
-while line:
-    my_f.writelines(line)
-    line = input('Введите текст \n')
-    if not line:
-        break
+from time import sleep
 
-my_f.close()
-my_f = open('test.txt', 'r')
-content = my_f.readlines()
-print(content)
-my_f.close()
+class TrafficLight:
+    __color = ['Красный', 'Желтый', 'Зеленый']
+
+    def running(self):
+        i = 0
+        while i < 3:
+            print(f'Светофор переключается \n '
+                  f'{TrafficLight.__color[i]}')
+            if i == 0:
+                sleep(7)
+            elif i == 1:
+                sleep(5)
+            elif i == 2:
+                sleep(3)
+            i += 1
+
+TrafficLight = TrafficLight()
+TrafficLight.running()
