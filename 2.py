@@ -1,15 +1,17 @@
-my_file = open('file_2.txt', 'r')
-content = my_file.read()
-print(f'Содержимое файла: \n {content}')
-my_file = open('file_2.txt', 'r')
-content = my_file.readlines()
-print(f'Количество строк в файле - {len(content)}')
-my_file = open('file_2.txt', 'r')
-content = my_file.readlines()
-for i in range(len(content)):
-    print(f'Окличество символов {i + 1} - ой строки {len(content[i])}')
-my_file = open('file_2.txt', 'r')
-content = my_file.read()
-content = content.split()
-print(f'Общее количество слов - {len(content)}')
-my_file.close()
+class Road:
+    def __init__(self, _length, _width):
+        self._length = _length
+        self._width = _width
+
+    def mass(self):
+        return self._length * self._width
+
+
+class MassCount(Road):
+    def __init__(self, _length, _width, volume):
+        super().__init__(_length, _width)
+        self.volume = volume
+
+
+r = MassCount(25, 10000, 125)
+print(r.mass())
